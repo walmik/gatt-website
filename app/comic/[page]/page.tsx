@@ -9,7 +9,7 @@ import { ChevronLeft, ChevronRight, Home } from "lucide-react"
 import { Pagination } from "@/components/comic-pagination"
 
 // Total number of pages in the comic
-const TOTAL_PAGES = 17
+const TOTAL_PAGES = 23
 
 export default function ComicPage() {
   const router = useRouter()
