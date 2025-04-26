@@ -9,7 +9,7 @@ import { ChevronLeft, ChevronRight, Home } from "lucide-react"
 import { Pagination } from "@/components/comic-pagination"
 
 // Total number of pages in the comic
-const TOTAL_PAGES = 23
+const TOTAL_PAGES = 25
 
 export default function ComicPage() {
   const router = useRouter()
@@ -80,7 +80,7 @@ export default function ComicPage() {
           </Button>
         </div>
 
-        {/* <Pagination currentPage={currentPage} totalPages={TOTAL_PAGES} /> */}
+        <Pagination currentPage={currentPage} totalPages={TOTAL_PAGES} />
 
         <div className="mt-6 text-center text-sm text-muted-foreground">
           <p>Use arrow keys to navigate: ← Previous | Next →</p>
