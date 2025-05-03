@@ -49,6 +49,20 @@ export default function ComicPage() {
 
         <div className="relative w-full aspect-[1/2] mb-6 rounded-md overflow-hidden">
           <div className="absolute rounded-lg z-10"></div>
+          <div className="absolute inset-0 flex w-full h-full z-20">
+            {/* Left half - go to previous page */}
+            <div 
+              className="w-1/2 h-full cursor-w-resize" 
+              onClick={() => currentPage > 1 && router.push(`/comic/${Math.max(1, currentPage - 1)}`)}
+              title="Previous page"
+            ></div>
+            {/* Right half - go to next page */}
+            <div 
+              className="w-1/2 h-full cursor-e-resize" 
+              onClick={() => currentPage < TOTAL_PAGES && router.push(`/comic/${Math.min(TOTAL_PAGES, currentPage + 1)}`)}
+              title="Next page"
+            ></div>
+          </div>
           <Image
             src={`/reference/${currentPage}.png?height=1080&width=1920&text=GATT+${currentPage}`}
             alt={`Comic page ${currentPage}`}
