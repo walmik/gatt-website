@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body>
         <ThemeProviderDark attribute="class" defaultTheme="dark" enableSystem={false}>
           {children}
+          <Analytics />
         </ThemeProviderDark>
       </body>
     </html>
